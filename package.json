@@ -1,6 +1,6 @@
 {
   "name": "jira-assignee-filter-chrome-extension",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Adds a quick filter for assignees to JIRA Sprint Boards",
   "main": "index.js",
   "scripts": {
