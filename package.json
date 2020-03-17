@@ -14,7 +14,8 @@
   "license": "MIT",
   "dependencies": {
     "dom-chef": "^3.6.3",
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "lodash": "^4.17.15"
   },
   "devDependencies": {
     "@babel/core": "^7.8.7",

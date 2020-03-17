@@ -1,5 +1,6 @@
 import { h } from 'dom-chef';
 import $ from 'jquery';
+import { uniqBy } from 'lodash';
 
 const CONSOLE_PREFIX = '[ASSIGNEE_FILTER]';
 
@@ -72,7 +73,7 @@ const getAllVisibleAssignees = () => {
     };
     avatars.push(avatar);
   });
-  const assignees = _.uniqBy(avatars, 'name');
+  const assignees = uniqBy(avatars, 'name');
   logger.info(assignees);
   return assignees;
 };
