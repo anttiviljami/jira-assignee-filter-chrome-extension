@@ -1,6 +1,6 @@
 {
   "name": "JIRA Assignee Filter",
-  "version": "0.1",
+  "version": "0.0.2",
   "manifest_version": 2,
   "description": "Adds an assignee filter to JIRA Boards",
   "permissions": ["activeTab"],
