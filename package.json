@@ -6,7 +6,7 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "publish": "zip -r jira-assignee-filter-chrome-extension.zip ./*",
+    "publish": "zip -r build.zip ./*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
