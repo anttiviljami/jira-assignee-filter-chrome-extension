@@ -1,6 +1,5 @@
 import { h } from 'dom-chef';
 import $ from 'jquery';
-import _ from 'lodash';
 
 const CONSOLE_PREFIX = '[ASSIGNEE_FILTER]';
 
