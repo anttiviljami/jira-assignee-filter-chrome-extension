@@ -1,5 +1,6 @@
 # JIRA Assignee Filter Chrome Extension
 [![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/anttiviljami/jira-assignee-filter-chrome-extension/blob/master/LICENSE)
+![CI](https://github.com/anttiviljami/jira-assignee-filter-chrome-extension/workflows/CI/badge.svg)
 
 Adds an assignee filter for JIRA Boards.
 
