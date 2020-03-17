@@ -1,0 +1,28 @@
+#assignee-filter {
+  display: flex;
+  padding-left: 0;
+}
+
+#assignee-filter > li {
+  list-style: none;
+  display: flex;
+}
+
+#assignee-filter .assignee-avatar {
+  display: inline-block;
+  border-radius: 100%;
+  overflow: hidden;
+  width: 30px;
+  height: 30px;
+  border: 4px solid white;
+  cursor: pointer;
+}
+
+#assignee-filter .assignee-avatar.highlight {
+  border-color: orange;
+}
+
+#assignee-filter .assignee-avatar img {
+  max-width: 100%;
+  height: auto;
+}
