@@ -13,14 +13,14 @@ const logger = {
 
 let currentAssignee = null;
 
-const filterToAssignee = (name) => {
+const filterToAssignee = async (name) => {
   // toggle assignee
   currentAssignee = currentAssignee === name ? null : name;
   console.log({ currentAssignee });
 
   // expand all swimlanes
-  $('#board-tools-section-button').click();
-  $('.js-view-action-expand-all').click();
+  await $('#board-tools-section-button').click();
+  await $('.js-view-action-expand-all').click();
 
   // clear highlights
   $('.assignee-avatar').removeClass('highlight');

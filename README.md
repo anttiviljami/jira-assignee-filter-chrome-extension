@@ -3,6 +3,8 @@
 
 Adds an assignee dropdown filter to JIRA Boards.
 
+![Demo](demo.gif)
+
 ## Installation
 
 Clone this repo
