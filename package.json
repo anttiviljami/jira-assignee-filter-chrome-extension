@@ -6,7 +6,7 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "publish": "zip -r build.zip ./*",
+    "publish": "npm prune --production && zip -r jira-assigned-filter-chrome-extension.zip ./*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
