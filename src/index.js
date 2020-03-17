@@ -1,6 +1,6 @@
 import { h } from 'dom-chef';
 import $ from 'jquery';
-import { uniqBy } from 'lodash';
+import uniqBy from 'lodash/uniqBy';
 
 const CONSOLE_PREFIX = '[ASSIGNEE_FILTER]';
 
