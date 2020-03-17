@@ -7,7 +7,7 @@ Adds an assignee filter for JIRA Boards.
 
 ## Installation
 
-Download the latest release from the [Releases page](https://github.com/anttiviljami/jira-assignee-filter-chrome-extension/releases)
+Download the latest release from the [Releases page](https://github.com/anttiviljami/jira-assignee-filter-chrome-extension/releases) and unzip it
 
 Navigate to [`chrome://extensions`](chrome://extensions)
 
@@ -15,7 +15,7 @@ Turn on `Developer Mode`
 
 ![Developer mode screenshot](developer-mode.png)
 
-Click on `Load unpacked` and select the cloned repository
+Click on `Load unpacked` and select the unzipped package
 
 ## Development
 
