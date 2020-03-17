@@ -2,7 +2,7 @@
   "name": "JIRA Assignee Filter",
   "version": "0.1",
   "manifest_version": 2,
-  "description": "Adds an assignee dropdown filter to JIRA Boards.",
+  "description": "Adds an assignee filter to JIRA Boards",
   "permissions": ["activeTab"],
   "content_scripts": [
     {
