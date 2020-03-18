@@ -8,7 +8,7 @@
     {
       "matches": ["*://*/*RapidBoard.jspa*"],
       "js": ["dist/bundle.js"],
-      "css": ["src/style.css"]
+      "css": ["dist/style.css"]
     }
   ]
 }
