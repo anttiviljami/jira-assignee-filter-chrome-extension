@@ -11,21 +11,30 @@ const logger = {
   error: (...args) => console.error(CONSOLE_PREFIX, ...args),
 };
 
+let observers = [];
 let currentAssignee = null;
 
 const filterToAssignee = async (name) => {
-  // toggle assignee
-  currentAssignee = currentAssignee === name ? null : name;
-  console.log({ currentAssignee });
-
-  // expand all swimlanes
-  await $('#board-tools-section-button').click();
-  await $('.js-view-action-expand-all').click();
+  currentAssignee = name;
+  logger.info({ currentAssignee });
 
   // clear highlights
   $('.assignee-avatar').removeClass('highlight');
 
+  // disconnect previous mutation observers
+  observers.map((o) => o.disconnect());
+  observers = [];
+
   if (currentAssignee) {
+    // reset filter on .ghx-column subtree modifications changes
+    $('.ghx-column').each((_, e) => {
+      const observer = new MutationObserver(() => {
+        filterToAssignee(currentAssignee);
+      });
+      observer.observe(e, { childList: true, subtree: true });
+      observers.push(observer);
+    });
+
     // hide all cards
     $('.ghx-issue').hide();
 
@@ -45,11 +54,14 @@ const filterToAssignee = async (name) => {
   }
 };
 
-const renderDropdown = (assignees) => {
+const renderFilter = (assignees) => {
   return (
     <ul id="assignee-filter">
       {assignees.map(({ name, img }) => (
-        <li className="item" onClick={() => filterToAssignee(name)}>
+        <li
+          className="item"
+          onClick={() => (currentAssignee === name ? filterToAssignee(null) : filterToAssignee(name))}
+        >
           <div className="assignee-avatar" data-name={name}>
             <img alt={name} title={name} src={img} />
           </div>
@@ -81,8 +93,8 @@ const getAllVisibleAssignees = () => {
 const init = async () => {
   await new Promise((resolve) => setTimeout(resolve, 1000));
   const assignees = getAllVisibleAssignees();
-  const assigneeDropdown = renderDropdown(assignees);
-  $('#ghx-header').append(assigneeDropdown);
+  const assigneeFilter = renderFilter(assignees);
+  $('#ghx-header').append(assigneeFilter);
 };
 
 $(window).ready(init);
